@@ -18,7 +18,7 @@ int main() {
     } 
     else if (x == '/') {
         if (b == 0) {
-            printf("Error: Division by zero\n");
+            printf("error");
         } else {
             printf("%d\n", a / b);
         }
