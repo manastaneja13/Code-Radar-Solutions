@@ -1,23 +1,31 @@
-#include<stdio.h>
-int main(){
-    int a,b,c,d,e,f;
+#include <stdio.h>
+
+int main() {
+    int a, b;
     char x;
-    scanf("%d%d%c",&a ,&b,&x);
-    if (x == '+'){
-        c = a+b;
-        printf("%d",c);
+
+    // Properly handle input with space before %c
+    scanf("%d %d %c", &a, &b, &x);
+
+    if (x == '+') {
+        printf("%d\n", a + b);
+    } 
+    else if (x == '-') {
+        printf("%d\n", a - b);
+    } 
+    else if (x == '*') {
+        printf("%d\n", a * b);
+    } 
+    else if (x == '/') {
+        if (b == 0) {
+            printf("Error: Division by zero\n");
+        } else {
+            printf("%d\n", a / b);
+        }
+    } 
+    else {
+        printf("Invalid operator\n");
     }
-    else if (x == '-'){
-        d = a-b;
-        printf("%d",d);
-    }
-    else if (x == '*'){
-        e = a*b;
-        printf("%d",e);
-    }
-    else if (x == '/'){
-        f = a/b;
-        printf("%d",f);
-    }
+
     return 0;
 }
