@@ -2,10 +2,7 @@
 int main(){
     int a,b,c,d,e,f,g,h;
     char x;
-    printf("Enter the operator: ");
-    scanf("%c",&x);
-    printf("Enter 2 no.: ");
-    scanf("%d%d",&a ,&b);
+    scanf("%d%d%c",&a ,&b,&c);
     if (x == '+'){
         c = a+b;
         printf("%d",c);
