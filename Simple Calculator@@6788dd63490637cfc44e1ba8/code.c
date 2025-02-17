@@ -3,8 +3,6 @@
 int main() {
     int a, b;
     char x;
-
-    // Properly handle input with space before %c
     scanf("%d %d %c", &a, &b, &x);
 
     if (x == '+') {
